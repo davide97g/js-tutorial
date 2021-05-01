@@ -1,0 +1,30 @@
+.date-card {
+  /* height: 350px; */
+  width: 350px;
+}
+
+.card-title {
+  text-align: center;
+  background-color: cornflowerblue;
+  color: whitesmoke;
+}
+
+.card-description {
+  text-align: left;
+  padding: 10px;
+}
+
+.card-extra {
+  text-align: center;
+  padding: 10px;
+}
+
+.card-actions {
+  margin: auto;
+}
+
+.divider {
+  height: 0px;
+  border-top: cornflowerblue 1px solid;
+  width: auto;
+}

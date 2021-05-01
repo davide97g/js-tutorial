@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script async defer src="./index.js"></script>
+    <title>Too-Doo</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Too-Doo</h1>
+    <div id="container">
+      <div class="mdc-card date-card mdc-card--outlined">
+        <div class="card-title">
+          <h4>Day 01-05-2021</h4>
+        </div>
+        <div class="card-description">
+          <span>Here goes the full description for this task</span>
+          <!-- ... additional primary action content ... -->
+        </div>
+        <div class="card-extra">
+          <span>9:00</span> -
+          <span>11:00</span>
+          <!-- todo: favorite checkbox -->
+        </div>
+        <div class="mdc-card__actions card-actions">
+          <button
+            id="complete_01-05-2021_0"
+            class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon"
+            title="Done"
+            onclick="complete(this.id)"
+          >
+            done
+          </button>
+          <button
+            id="remove_01-05-2021_0"
+            class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon"
+            title="Remove"
+            onclick="remove(this.id)"
+          >
+            clear
+          </button>
+        </div>
+        <span class="divider"></span>
+      </div>
+    </div>
+  </body>
+</html>
