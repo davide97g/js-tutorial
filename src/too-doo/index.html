@@ -19,7 +19,39 @@
   </head>
   <body>
     <h1 style="text-align: center">Too-Doo</h1>
-    <div id="container">
+    <div id="new-task-card">
+      <div class="card-title">Add New Task</div>
+      <div class="card-extra">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <div class="card-extra">
+        <label for="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="2"
+        ></textarea>
+      </div>
+      <div class="card-extra">
+        <label for="from">From</label>
+        <input type="time" name="from" id="from" />
+        <label for="to">To</label>
+        <input type="time" name="to" id="to" />
+      </div>
+      <div class="card-extra">
+        <button
+          id="add_01-05-2021"
+          class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon"
+          title="Add"
+          onclick="addNewTask()"
+        >
+          add
+        </button>
+      </div>
+    </div>
+    <div id="tasks-container">
       <div class="mdc-card date-card mdc-card--outlined">
         <div class="card-title">
           <h4>Day 01-05-2021</h4>
