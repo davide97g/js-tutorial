@@ -8,7 +8,7 @@ let database = {
     },
     {
       description: "Task 1",
-      from: "9:00",
+      from: "09:00",
       to: "11:00",
       completed: false,
     },
@@ -33,9 +33,13 @@ let database = {
 
 const container = document.getElementById("tasks-container");
 
+function sortTasks(task1, task2) {
+  return task1.from < task2.from ? -1 : 1;
+}
+
 function sortDatabase() {
   for (let date in database)
-    database[date].sort((task1, task2) => (task1.from < task2.from ? 1 : -1)); // sort using from property
+    database[date].sort((task1, task2) => (task1.from < task2.from ? -1 : 1)); // sort using from property
 }
 
 function addDate(date) {
@@ -57,7 +61,7 @@ function addTask(date, description, from, to) {
 }
 
 function renderAll() {
-  container.innerHTML = "";
+  container.innerHTML = ""; // reset
   for (let date in database) createCard(date);
 }
 
@@ -117,19 +121,6 @@ function createCard(date) {
   // newTaskCard = createNewTaskCard(date);
   // append card to container
   container.appendChild(card);
-}
-
-function createNewTaskCard(date) {
-  // description
-  let description = document.createElement("div");
-  description.classList.add("card-description");
-  description.innerHTML = "<input type='text'/>";
-  // card.appendChild(description); // ? add to card
-  // extra info
-  // let extra = document.createElement("div");
-  // extra.classList.add("card-extra");
-  // extra.innerHTML = "<span>" + task.from + " - " + task.to + "</span>";
-  // card.appendChild(extra); // ? add to card
 }
 
 function removeTask(date, index) {
